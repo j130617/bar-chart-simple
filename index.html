@@ -11,7 +11,7 @@
 <script src="//d3js.org/d3.v4.min.js"></script>
 <script>
 
-var csv = [
+var data = [
   {sales: 32, salesperson: 'January'},
   {sales: 38, salesperson: 'February'},
   {sales: 47, salesperson: 'March'},
@@ -44,7 +44,7 @@ var svg = d3.select("body").append("svg")
 //d3.csv("data.csv", function(error, data) {
   //if (error) throw error;
 
-var data = d3.csvParse(csv);
+//var data = d3.csvParse(csv);
 	
   // format the data
   data.forEach(function(d) {
