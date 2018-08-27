@@ -11,21 +11,20 @@
 <script src="//d3js.org/d3.v4.min.js"></script>
 <script>
 
-var csv = `salesperson,sales
-Jan,33
-Kees,12
-Anne,41
-Mark,16
-Joe,59
-Eve,38
-Karen,21
-Kirsty,25
-Chris,30
-Lisa,47
-Tom,5
-Stacy,20
-Charles,13
-Piet,29`;
+var csv = [
+  {temp: 32, month: 'January'},
+  {temp: 38, month: 'February'},
+  {temp: 47, month: 'March'},
+  {temp: 59, month: 'April'},
+  {temp: 70, month: 'May'},
+  {temp: 80, month: 'June'},
+  {temp: 84, month: 'July'},
+  {temp: 83, month: 'Auguest'},
+  {temp: 76, month: 'September'},
+  {temp: 64, month: 'October'},
+  {temp: 49, month: 'November'},
+  {temp: 37, month: 'December'}
+];
 	
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
