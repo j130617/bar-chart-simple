@@ -11,6 +11,22 @@
 <script src="//d3js.org/d3.v4.min.js"></script>
 <script>
 
+var csv = `salesperson,sales
+Bob,33
+Robin,12
+Anne,41
+Mark,16
+Joe,59
+Eve,38
+Karen,21
+Kirsty,25
+Chris,30
+Lisa,47
+Tom,5
+Stacy,20
+Charles,13
+Piet,29`;
+	
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = 700 - margin.left - margin.right,
@@ -34,9 +50,11 @@ var svg = d3.select("body").append("svg")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // get the data
-d3.csv("data.csv", function(error, data) {
-  if (error) throw error;
+//d3.csv("data.csv", function(error, data) {
+  //if (error) throw error;
 
+var data = d3.csvParse(csv);
+	
   // format the data
   data.forEach(function(d) {
     d.sales = +d.sales;
